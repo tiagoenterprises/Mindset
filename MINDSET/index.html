@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindset - Nova Coleção</title>
+  <script src="https://kit.fontawesome.com/4c5aad3e8f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/extrahome.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="menu-overlay" onclick="fecharMenuMobile()"></div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/MINDSETFINAL.png" alt="Mindset Logo" style="height: 44px;">
+        </a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="colecao.html?colecao=New">New & Featured</a></li>
+        <li><a href="colecao.html?colecao=all">Shop All</a></li>
+        <li class="has-submenu">
+          <a href="colecao.html?colecao=caps" class="submenu-toggle">Caps</a>
+          <ul class="submenu">
+            <li><a href="colecao.html?colecao=trucker">Trucker</a></li>
+            <li><a href="colecao.html?colecao=bombazine">Bombazine</a></li>
+            <li><a href="colecao.html?colecao=canvas">Canvas</a></li>
+          </ul>
+        </li>        
+        <li><a href="colecao.html?colecao=COLLABS">Collabs</a></li>
+        <button class="close-menu" onclick="fecharMenuMobile()">✕</button>
+      </ul>
+      <!-- Novo menu mobile para CAPS -->
+      <ul class="subcolecao-menu" id="capsMenu">
+        <button class="close-menu" onclick="fecharMenuMobile()">✕</button>
+        <li><a href="colecao.html?colecao=trucker">Trucker</a></li>
+        <li><a href="colecao.html?colecao=bombazine">Bombazine</a></li>
+        <li><a href="colecao.html?colecao=canvas">Canvas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <img src="img/search-line-icon.png" id="search-icon" alt="Pesquisar" onclick="toggleSearch()" style="cursor:pointer; height: 26px;">
+        <a href="cart.html" id="cart-icon">
+          <img src="img/bag-icon.png" alt="Carrinho" style="height: 26px;">
+        </a>
+        <input type="text" id="search-input" placeholder="Procurar..." />
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <img src="img/three-horizontal-lines-outline-icon.png" alt="Menu" style="height: 26px; cursor: pointer;">
+        </div>
+      </div>
+
+    </nav>
+    <div id="searchOverlay" class="search-overlay">
+      <div id="searchBackdrop" class="search-backdrop" onclick="fecharPesquisa()"></div>
+      <div class="search-header">
+        <img src="img/mindsetlogo.png" alt="Logo Mindset" class="search-logo">
+        <button class="close-search" onclick="fecharPesquisa()">✕</button>
+      </div>
+      <div class="search-box">
+        <div class="search-input-container">
+          <img src="img/search-line-icon.png" class="search-icon" />
+          <input type="text" placeholder="Pesquisar produto ou coleção..." />
+        </div>
+      </div>
+      <div class="search-suggestions">
+        <p>Pesquisas populares</p>
+        <div class="tag-container">
+          <span class="search-tag">urban</span>
+          <span class="search-tag">trucker</span>
+          <span class="search-tag">classic</span>
+          <span class="search-tag">preto</span>
+          <span class="search-tag">mindset</span>
+          <span class="search-tag">canvas</span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </header>
+
+  <section class="banner-carousel">
+    <div class="slides">
+      <div class="slide active" style="background-image: url('img/ferrarimindset.jpg');">
+        <div class="banner-content">
+          <p style="color: #000000;">New summer colours for our max cushioning icon.</p>
+          <a href="colecao.html" class="btn">Ver Coleção</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('img/mustangvermelho3.jpg');">
+        <div class="banner-content">
+          <p style="color: #ffffff;">New summer colours for our max cushioning icon.</p>
+          <a href="colecao.html?colecao=caps" class="btn">Explorar</a>
+        </div>
+      </div>
+      <!-- Adiciona mais slides se quiseres -->
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </section>
+  
+  
+
+  <section class="colecao-grade">
+    <div class="colecao-item">
+      <a href="colecao.html?colecao=urban">
+        <div class="colecao-image" style="background-image: url('img/mindset3.jpg');">
+          <div class="colecao-info">
+            <h3>Urban</h3>
+            <p>Estilo autêntico para o dia a dia.</p>
+            <span class="colecao-btn">Explorar</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="colecao-item">
+      <a href="colecao.html?colecao=urban">
+        <div class="colecao-image" style="background-image: url('img/mindset2.jpg');">
+          <div class="colecao-info">
+            <h3>Urban</h3>
+            <p>Estilo autêntico para o dia a dia.</p>
+            <span class="colecao-btn">Explorar</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="colecao-item">
+      <a href="colecao.html?colecao=urban">
+        <div class="colecao-image" style="background-image: url('img/mindset1.jpg');">
+          <div class="colecao-info">
+            <h3>Urban</h3>
+            <p>Estilo autêntico para o dia a dia.</p>
+            <span class="colecao-btn">Explorar</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="colecao-item">
+      <a href="colecao.html?colecao=urban">
+        <div class="colecao-image" style="background-image: url('img/mindsetlambo.jpg');">
+          <div class="colecao-info">
+            <h3>Urban</h3>
+            <p>Estilo autêntico para o dia a dia.</p>
+            <span class="colecao-btn">Explorar</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Repete para outras coleções -->
+  </section>
+  
+  
+  
+
+  <section class="destaques">
+    <h2>Bestsellers</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="img/denimtrucker.jpg" alt="Denim Trucker">
+        <h3>Chapéu Urbano</h3>
+        <p>Estilo moderno com toque minimalista.</p>
+        <a href="produto.html?produto=chapeu-urbano" class="btn">Comprar</a>
+      </div>
+      <div class="produto">
+        <img src="img/drivenfrente.png" alt="Driven">
+        <h3>Driven</h3>
+        <p>Um clássico repaginado para o mundo urbano.</p>
+        <a href="produto.html?produto=driven" class="btn">Comprar</a>
+      </div>
+      <div class="produto">
+        <img src="img/denimtrucker.jpg" alt="Denim Trucker">
+        <h3>Edição Exclusiva</h3>
+        <p>Para quem busca autenticidade sem limites.</p>
+        <a href="produto.html?produto=chapeu-exclusivo" class="btn">Comprar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+    <hr class="separador">
+    <!-- Primeira parte: newsletter, redes e contato -->
+    <h2>10% DE DESCONTO NA INSCRIÇÂO DAS NOSSAS NEWSLETTERS!</h2>
+    <div class="footer-top">
+    <!-- Newsletter -->
+  <div class="newsletter">
+  <form>
+    <input type="email" placeholder="EMAIL" required>
+  </form>
+  </div>
+
+<!-- Telemóvel -->
+    <div class="contacto">
+  <form>
+    <input type="tel" placeholder="NÚMERO DE TELEMÓVEL" required>
+  </form>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="socials">
+      <div class="icons-circulares">
+        <a href="#" class="icon-wrapper" aria-label="Instagram">
+          <img src="img/black-instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="TikTok">
+          <img src="img/tiktok-icon.png" alt="TikTok" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="Whatsapp">
+          <img src="img/whatsapp-icon.png" alt="Whatsapp" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="Facebook">
+          <img src="img/facebook-square-black-icon.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-quick-links">
+    <div class="quick-column">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#">Coleção</a></li>
+        <li><a href="#">Personalize</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  
+    <div class="quick-column">
+      <h4>Políticas</h4>
+      <ul>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos de Serviço</a></li>
+        <li><a href="#">Reembolsos</a></li>
+      </ul>
+    </div>
+  
+    <div class="quick-column">
+      <h4>Suporte</h4>
+      <ul>
+        <li><a href="#">Ajuda</a></li>
+        <li><a href="#">Envios</a></li>
+        <li><a href="#">Trocas</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- Segunda parte: pagamentos e direitos -->
+    <div class="footer-bottom">
+      <div class="pagamentos">
+        <h3>Pagamentos Aceitos</h3>
+        <div class="payment-icons">
+          <img src="visa.png" alt="Visa" />
+          <img src="pix.png" alt="Pix" />
+          <!-- Outros ícones -->
+        </div>
+      </div>
+      <p>&copy; 2025 Mindset. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+<!-- JAVASCRIPT -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  // Optional: autoplay
+  setInterval(() => {
+    changeSlide(1);
+  }, 7000); // muda a cada 7 segundos
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("ul.nav-links");
+    const capsMenu = document.getElementById("capsMenu");
+    const capsLink = document.querySelector(".submenu-toggle");
+    const body = document.body;
+  
+    // Abrir menu de subcoleções
+    if (capsLink) {
+      capsLink.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          nav.classList.remove("show");
+          capsMenu.classList.add("show");
+          body.classList.add("menu-aberto");
+        }
+      });
+    }
+  
+    // Voltar ao menu principal
+    window.voltarMenu = function () {
+      capsMenu.classList.remove("show");
+      nav.classList.add("show");
+      body.classList.add("menu-aberto");
+    };
+  
+    // Fechar tudo com o botão "✕"
+    window.fecharMenuMobile = function () {
+      nav.classList.remove("show");
+      capsMenu.classList.remove("show");
+      body.classList.remove("menu-aberto");
+    };
+  
+    // Toggle menu principal
+    window.toggleMenu = function () {
+      const cart = document.getElementById("cartSidebar");
+      if (cart && cart.classList.contains("show")) {
+        cart.classList.remove("show");
+      }
+      nav.classList.toggle("show");
+      capsMenu.classList.remove("show");
+      body.classList.toggle("menu-aberto");
+    };
+  
+    // Toggle lupa
+  });
+  function toggleSearch() {
+  document.getElementById("searchOverlay").classList.add("show");
+  document.getElementById("searchBackdrop").classList.add("show");
+}
+
+function fecharPesquisa() {
+  document.getElementById("searchOverlay").classList.remove("show");
+  document.getElementById("searchBackdrop").classList.remove("show");
+}
+  </script>
+
+  <!-- Complemento Search com Produtos.json -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.querySelector("#searchOverlay input");
+      const resultado = document.createElement("div");
+      resultado.classList.add("resultados-busca");
+      input.parentNode.appendChild(resultado);
+    
+      input.addEventListener("input", async () => {
+        const termo = input.value.toLowerCase();
+        resultado.innerHTML = "";
+    
+        if (termo.length < 2) return;
+    
+        const resposta = await fetch("produtos.json");
+        const produtos = await resposta.json();
+    
+        const filtrados = produtos.filter(p =>
+          p.nome.toLowerCase().includes(termo) ||
+          (p.colecao && p.colecao.toLowerCase().includes(termo)) ||
+          (p.maincollection && p.maincollection.toLowerCase().includes(termo))
+        );
+    
+        if (filtrados.length === 0) {
+          resultado.innerHTML = "<p>Sem resultados</p>";
+        } else {
+          filtrados.forEach(produto => {
+            const div = document.createElement("div");
+            div.classList.add("resultado-item");
+            div.innerHTML = `
+              <a href="produto.html?nome=${encodeURIComponent(produto.nome)}">
+                <img src="${produto.imagem}" alt="${produto.nome}" />
+                <span>${produto.nome}</span>
+              </a>
+            `;
+            resultado.appendChild(div);
+          });
+        }
+      });
+    });
+    </script>
+
+
+</body>
+</html>
