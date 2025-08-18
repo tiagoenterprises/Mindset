@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindset - Nova Coleção</title>
+  <script src="https://kit.fontawesome.com/4c5aad3e8f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/produto.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div id="menu-overlay" onclick="fecharMenuMobile()"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/MINDSETFINAL.png" alt="Mindset Logo" style="height: 44px;">
+          </a>
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="colecao.html?colecao=New">New & Featured</a></li>
+          <li><a href="colecao.html?colecao=all">Shop All</a></li>
+          <li class="has-submenu">
+            <a href="colecao.html?colecao=caps" class="submenu-toggle">Caps</a>
+            <ul class="submenu">
+              <li><a href="colecao.html?colecao=trucker">Trucker</a></li>
+              <li><a href="colecao.html?colecao=bombazine">Bombazine</a></li>
+              <li><a href="colecao.html?colecao=canvas">Canvas</a></li>
+            </ul>
+          </li>        
+          <li><a href="colecao.html?colecao=COLLABS">Collabs</a></li>
+          <button class="close-menu" onclick="fecharMenuMobile()">✕</button>
+        </ul>
+        <!-- Novo menu mobile para CAPS -->
+        <ul class="subcolecao-menu" id="capsMenu">
+          <button class="close-menu" onclick="fecharMenuMobile()">✕</button>
+          <li><a href="colecao.html?colecao=trucker">Trucker</a></li>
+          <li><a href="colecao.html?colecao=bombazine">Bombazine</a></li>
+          <li><a href="colecao.html?colecao=canvas">Canvas</a></li>
+        </ul>
+  
+        <div class="nav-actions">
+          <img src="img/search-line-icon.png" id="search-icon" alt="Pesquisar" onclick="toggleSearch()" style="cursor:pointer; height: 26px;">
+          <a href="cart.html" id="cart-icon">
+            <img src="img/bag-icon.png" alt="Carrinho" style="height: 26px;">
+          </a>
+          <input type="text" id="search-input" placeholder="Procurar..." />
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <img src="img/three-horizontal-lines-outline-icon.png" alt="Menu" style="height: 26px; cursor: pointer;">
+          </div>
+        </div>
+  
+      </nav>
+  </header>
+  <div class="announcement-bar-animada">
+    <span class="announcement-seta esquerda">❮</span>
+  
+    <div class="announcement-track">
+      <span class="announcement-item ativo">🧢 Frete grátis acima de 50€!</span>
+      <span class="announcement-item">💥 Nova coleção já disponível!</span>
+    </div>
+  
+    <span class="announcement-seta direita">❯</span>
+  </div>
+  
+  <section class="pagina-produto" id="pagina-produto">
+    <!-- Conteúdo será carregado via JavaScript -->
+  </section>
+  <footer>
+
+    <hr class="separador">
+    <!-- Primeira parte: newsletter, redes e contato -->
+    <h2>10% DE DESCONTO NA INSCRIÇÂO DAS NOSSAS NEWSLETTERS!</h2>
+    <div class="footer-top">
+    <!-- Newsletter -->
+  <div class="newsletter">
+  <form>
+    <input type="email" placeholder="EMAIL" required>
+  </form>
+  </div>
+
+<!-- Telemóvel -->
+    <div class="contacto">
+  <form>
+    <input type="tel" placeholder="NÚMERO DE TELEMÓVEL" required>
+  </form>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="socials">
+      <div class="icons-circulares">
+        <a href="#" class="icon-wrapper" aria-label="Instagram">
+          <img src="img/black-instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="TikTok">
+          <img src="img/tiktok-icon.png" alt="TikTok" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="Whatsapp">
+          <img src="img/whatsapp-icon.png" alt="Whatsapp" />
+        </a>
+        <a href="#" class="icon-wrapper" aria-label="Facebook">
+          <img src="img/facebook-square-black-icon.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-quick-links">
+    <div class="quick-column">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#">Coleção</a></li>
+        <li><a href="#">Personalize</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  
+    <div class="quick-column">
+      <h4>Políticas</h4>
+      <ul>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos de Serviço</a></li>
+        <li><a href="#">Reembolsos</a></li>
+      </ul>
+    </div>
+  
+    <div class="quick-column">
+      <h4>Suporte</h4>
+      <ul>
+        <li><a href="#">Ajuda</a></li>
+        <li><a href="#">Envios</a></li>
+        <li><a href="#">Trocas</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- Segunda parte: pagamentos e direitos -->
+    <div class="footer-bottom">
+      <div class="pagamentos">
+        <h3>Pagamentos Aceitos</h3>
+        <div class="payment-icons">
+          <img src="visa.png" alt="Visa" />
+          <img src="pix.png" alt="Pix" />
+          <!-- Outros ícones -->
+        </div>
+      </div>
+      <p>&copy; 2025 Mindset. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+<!-- JAVASCRIPT -->
+<script>
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    
+    function adicionarAoCarrinho(produto, tamanhoSelecionado) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const index = cart.findIndex(item => item.nome === produto.nome && item.tamanho === tamanhoSelecionado);
+    
+      if (index >= 0) {
+        cart[index].quantidade += 1;
+      } else {
+        cart.push({
+          nome: produto.nome,
+          preco: parseFloat(produto.preco.replace('€', '').replace(',', '.')),
+          imagem: produto.imagem,
+          quantidade: 1,
+          tamanho: tamanhoSelecionado
+        });
+      }
+    
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`"${produto.nome}" adicionado ao carrinho!`);
+    }
+    
+    async function renderProduto() {
+      const slug = getQueryParam('produto');
+      const container = document.getElementById("pagina-produto");
+    
+      try {
+        const response = await fetch('produtos.json');
+        const produtos = await response.json();
+        const produto = produtos.find(p => p.slug === slug);
+// Inicializa os accordions corretamente
+document.querySelectorAll('.accordion').forEach(accordion => {
+  const header = accordion.querySelector('.accordion-header');
+  const content = accordion.querySelector('.accordion-content');
+  const seta = header.querySelector('.seta');
+
+  // Inicia fechado
+  content.style.height = '0px';
+  content.style.overflow = 'hidden';
+
+  header.addEventListener('click', () => {
+    const isOpen = accordion.classList.contains('open');
+
+    if (isOpen) {
+      content.style.height = `${content.scrollHeight}px`;
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+      });
+      if (seta) seta.style.transform = 'rotate(45deg)';
+      accordion.classList.remove('open');
+    } else {
+      content.style.height = `${content.scrollHeight}px`;
+      accordion.classList.add('open');
+      if (seta) seta.style.transform = 'rotate(-135deg)';
+      content.addEventListener('transitionend', function handler() {
+        content.style.height = 'auto';
+        content.removeEventListener('transitionend', handler);
+      });
+    }
+  });
+});
+
+        if (!produto) {
+          container.innerHTML = "<p>Produto não encontrado.</p>";
+          return;
+        }
+        let imagensAtuais = produto.imagens?.length ? produto.imagens : [produto.imagem];
+    
+        container.innerHTML = `
+          <div class="container-produto">
+            <div class="galeria-imagens" id="galeria-imagens"></div>
+    
+            <div class="info-produto">
+              <h4>${produto.maincollection}</h4>
+              <h3>${produto.nome}</h3>
+              <p class="preco">${produto.preco}</p>
+    
+              <div class="variacoes-cores" id="seletor-cores"></div>
+    
+              <div class="tamanhos">
+                <h4>Escolhe o teu tamanho</h4>
+                <div class="opcoes-tamanho">
+                  <button>P</button>
+                  <button>M</button>
+                  <button>G</button>
+                  <button>Único</button>
+                </div>
+              </div>
+    
+              <button class="btn-comprar" disabled>Seleciona um tamanho</button>
+              <div class="material-box">
+                <h4>Material</h4>
+                  <p>${produto.material}</p>
+              </div>
+
+            <div class="accordion">
+              <button class="accordion-header">
+                Envios & Devoluções
+                  <span class="seta"></span>
+              </button>
+                <div class="accordion-content">
+                  <div class="accordion-box">
+                <p>Envios gratuitos acima de 50€ para Portugal Continental. <br> Devoluções simples até 30 dias após a compra.</p>
+                  <p>${produto.descricao}</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="accordion">
+              <button class="accordion-header">
+                Como É Feito Este Produto?
+                  <span class="seta"></span>
+              </button>
+                <div class="accordion-content">
+                  <div class="accordion-box">
+                <p>Envios gratuitos acima de 50€ para Portugal Continental. <br> Devoluções simples até 30 dias após a compra.</p>
+                </div>
+                </div>
+            <div class="Description-Box">
+            <div class="descricao-box">
+              <p>${produto.descricao}</p>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+          <div class="secao-sugeridos">
+            <h2>Também Pode Gostar</h2>
+          <div class="grade-sugeridos" id="sugeridos"></div>
+          </div>
+
+        `;
+        document.querySelectorAll('.accordion-header').forEach(header => {
+  const content = header.nextElementSibling;
+  const parent = header.parentElement;
+  const seta = header.querySelector('.seta');
+
+  // Garante altura 0 no início
+  content.style.height = '0px';
+
+  header.addEventListener('click', () => {
+    const isOpen = parent.classList.contains('open');
+
+    if (isOpen) {
+      // Para fechar: usa scrollHeight atual e volta para 0
+      content.style.height = `${content.scrollHeight}px`; // força altura atual
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+      });
+
+      // Gira seta para baixo
+      if (seta) seta.style.transform = 'rotate(45deg)';
+      parent.classList.remove('open');
+
+    } else {
+      // Para abrir: define altura fixa → depois limpa
+      const altura = content.scrollHeight;
+      content.style.height = `${altura}px`;
+      parent.classList.add('open');
+
+      // Gira seta para cima
+      if (seta) seta.style.transform = 'rotate(-135deg)';
+
+      // Após a animação, define como auto
+      const onTransitionEnd = () => {
+        content.style.height = 'auto';
+        content.removeEventListener('transitionend', onTransitionEnd);
+      };
+
+      content.addEventListener('transitionend', onTransitionEnd);
+    }
+  });
+});
+
+    // Sugestões de "Também Pode Gostar"
+const containerSugeridos = document.getElementById('sugeridos');
+const outros = produtos.filter(p => p.nome !== produto.nome).slice(0, 4); // até 4 produtos diferentes
+
+containerSugeridos.innerHTML = outros.map(p => `
+  <a href="produto.html?nome=${encodeURIComponent(p.nome)}" class="card-sugerido">
+    <img src="${p.imagem}" alt="${p.nome}">
+    <h4>${p.nome}</h4>
+    <p>${p.preco}</p>
+  </a>
+`).join('');
+
+
+
+    
+        renderGaleria(imagensAtuais);
+    
+        // Seletor de cor (local, sem redirect)
+        if (produto.variacoes && produto.variacoes.length > 1) {
+            const seletor = document.getElementById('seletor-cores');
+                seletor.innerHTML = `
+                    <div class="opcoes-cores">
+                         ${produto.variacoes.map((v, i) => `
+                    <button class="opcao-cor ${i === 0 ? 'ativo' : ''}" data-index="${i}" title="${v.cor}">
+                <img src="${v.imagem}" alt="${v.cor}">
+            </button>
+        `).join('')}
+        </div>
+        `;
+    
+          const botoesCor = seletor.querySelectorAll('.opcao-cor');
+          botoesCor.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const i = parseInt(btn.dataset.index);
+              const nova = produto.variacoes[i];
+              imagensAtuais = nova.imagens?.length ? nova.imagens : [nova.imagem];
+              renderGaleria(imagensAtuais);
+              botoesCor.forEach(b => b.classList.remove('ativo'));
+              btn.classList.add('ativo');
+            });
+          });
+        }
+    
+        // Tamanho + botão de compra
+        let tamanhoSelecionado = null;
+        const botoesTamanho = document.querySelectorAll('.opcoes-tamanho button');
+        const botaoComprar = document.querySelector('.btn-comprar');
+    
+        botoesTamanho.forEach(btn => {
+          btn.addEventListener('click', () => {
+            tamanhoSelecionado = btn.textContent;
+            botoesTamanho.forEach(b => b.classList.remove('ativo'));
+            btn.classList.add('ativo');
+            botaoComprar.textContent = "Adicionar ao Carrinho";
+            botaoComprar.disabled = false;
+          });
+        });
+    
+        botaoComprar.addEventListener('click', () => {
+          if (tamanhoSelecionado) {
+            adicionarAoCarrinho(produto, tamanhoSelecionado);
+          }
+        });
+    
+        // Galeria dinâmica
+        function renderGaleria(imagens) {
+          const galeriaContainer = document.getElementById('galeria-imagens');
+    
+          if (window.innerWidth <= 768) {
+            galeriaContainer.innerHTML = `
+  <div class="carrossel-wrapper">
+    <div class="carrossel-mobile" id="carrossel">
+      ${imagens.map(img => `<img src="${img}" alt="Produto">`).join('')}
+    </div>
+    <div class="carrossel-indicadores">
+      ${imagens.map((_, i) => `<span class="ponto ${i === 0 ? 'ativo' : ''}" data-index="${i}"></span>`).join('')}
+    </div>
+  </div>
+`;
+
+const carrossel = document.getElementById('carrossel');
+const pontos = document.querySelectorAll('.carrossel-indicadores .ponto');
+
+function updateIndicadores() {
+  const slideIndex = Math.round(carrossel.scrollLeft / carrossel.offsetWidth);
+  pontos.forEach((p, i) => {
+    p.classList.toggle('ativo', i === slideIndex);
+  });
+}
+
+carrossel.addEventListener('scroll', () => {
+  updateIndicadores();
+});
+
+pontos.forEach((ponto, i) => {
+  ponto.addEventListener('click', () => {
+    carrossel.scrollTo({
+      left: i * carrossel.offsetWidth,
+      behavior: 'smooth'
+    });
+  });
+});
+
+    
+            function updateSlide() {
+              carrossel.style.transform = `translateX(-${currentSlide * 100}%)`;
+              pontos.forEach((p, i) => {
+                p.classList.toggle('ativo', i === currentSlide);
+              });
+            }
+    
+          } else {
+            galeriaContainer.innerHTML = `
+              <div class="miniaturas">
+                ${imagens.map(img => `<img src="${img}" alt="Miniatura">`).join('')}
+              </div>
+              <div class="imagem-principal">
+                <img src="${imagens[0]}" alt="Produto" id="imagem-destacada">
+              </div>
+            `;
+    
+            const miniaturas = document.querySelectorAll('.miniaturas img');
+            const imagemDestacada = document.getElementById('imagem-destacada');
+            miniaturas.forEach(mini => {
+              mini.addEventListener('click', () => {
+                imagemDestacada.src = mini.src;
+              });
+            });
+          }
+        }
+    
+      } catch (error) {
+        container.innerHTML = "<p>Erro ao carregar produto.</p>";
+        console.error(error);
+      }
+    }
+    
+    renderProduto();
+    </script>
+    <!-- SCRIPT MENU -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("ul.nav-links");
+        const capsMenu = document.getElementById("capsMenu");
+        const capsLink = document.querySelector(".submenu-toggle");
+        const body = document.body;
+      
+        // Abrir menu de subcoleções
+        if (capsLink) {
+          capsLink.addEventListener("click", (e) => {
+            if (window.innerWidth <= 768) {
+              e.preventDefault();
+              nav.classList.remove("show");
+              capsMenu.classList.add("show");
+              body.classList.add("menu-aberto");
+            }
+          });
+        }
+      
+        // Voltar ao menu principal
+        window.voltarMenu = function () {
+          capsMenu.classList.remove("show");
+          nav.classList.add("show");
+          body.classList.add("menu-aberto");
+        };
+      
+        // Fechar tudo com o botão "✕"
+        window.fecharMenuMobile = function () {
+          nav.classList.remove("show");
+          capsMenu.classList.remove("show");
+          body.classList.remove("menu-aberto");
+        };
+      
+        // Toggle menu principal
+        window.toggleMenu = function () {
+          const cart = document.getElementById("cartSidebar");
+          if (cart && cart.classList.contains("show")) {
+            cart.classList.remove("show");
+          }
+          nav.classList.toggle("show");
+          capsMenu.classList.remove("show");
+          body.classList.toggle("menu-aberto");
+        };
+      
+        // Toggle lupa
+        window.toggleSearch = function () {
+          document.getElementById("search-input").classList.toggle("show");
+        };
+      });
+      function toggleSearch() {
+  document.getElementById("searchOverlay").classList.add("show");
+  document.getElementById("searchBackdrop").classList.add("show");
+}
+
+function fecharPesquisa() {
+  document.getElementById("searchOverlay").classList.remove("show");
+  document.getElementById("searchBackdrop").classList.remove("show");
+}
+
+  </script>
+  <script>
+function iniciarAnnouncementBar() {
+  const mensagens = document.querySelectorAll('.announcement-item');
+  const setaEsquerda = document.querySelector('.announcement-seta.esquerda');
+  const setaDireita = document.querySelector('.announcement-seta.direita');
+  let ativo = 0;
+  let intervalo;
+
+  function mostrar(index) {
+    mensagens.forEach((msg, i) => {
+      msg.classList.toggle('ativo', i === index);
+    });
+  }
+
+  function proximo() {
+    ativo = (ativo + 1) % mensagens.length;
+    mostrar(ativo);
+  }
+
+  function anterior() {
+    ativo = (ativo - 1 + mensagens.length) % mensagens.length;
+    mostrar(ativo);
+  }
+
+  setaDireita.addEventListener('click', proximo);
+  setaEsquerda.addEventListener('click', anterior);
+
+  intervalo = setInterval(proximo, 5000);
+}
+
+document.addEventListener('DOMContentLoaded', iniciarAnnouncementBar);
+
+  </script>
+    
+    
+  
+
+
+</body>
+</html>
+  
